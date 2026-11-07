@@ -16,9 +16,19 @@ Every developer has a graveyard: the weather CLI from second year, the Discord b
 
 Built for the [Flip the Switch hackathon](https://www.wemakedevs.org/hackathons/switch), Track 2: Best Personal or Creative Workflow.
 
-> 🎥 Demo video: _add link_ · 📝 Blog post: _add link_
+> 🎥 **Demo (3 min):** [youtu.be/2PV-MJNZW9c](https://youtu.be/2PV-MJNZW9c) · **Full walkthrough (12 min):** [youtu.be/62F8M-9Qm8E](https://youtu.be/62F8M-9Qm8E)
 
 ---
+
+## It works: my own graveyard
+
+Before the hackathon ended, I gave Sanjivani three of my own dead projects. Every number below comes from the agents' reports in the Discord room.
+
+| Patient | Dead for | Revivability | Fate | What happened |
+|---|---|---|---|---|
+| [ContextIQ](https://github.com/rishikeshvarma/ContextIQ): a Discord assistant that pulls tasks, decisions and deadlines out of a team's chat, built for a hackathon we lost | 6 months | 65/100 | 🫀 Revived | The Medic caught a misleading "strong pulse" (the install had failed and there were no tests), fixed the crash, added the database schema and 20 tests, and passed live tests against Gemini, Supabase and Discord with the keys kept in a `.env` file instead of the chat. [Pull request](https://github.com/rishikeshvarma/ContextIQ/pull/1) merged. |
+| [pocket-ledger](https://github.com/rishikeshvarma/pocket-ledger): a command-line expense tracker | 3.6 years (last words: `WIP: monthly budgets, will finish after exams`) | 63/100 | 🫀 Revived | Replaced the APIs Python removed in 3.10 and 3.12, finished the monthly budgets feature I abandoned, added CSV export, all 18 tests passing. [Pull request](https://github.com/rishikeshvarma/pocket-ledger/pull/1) merged. |
+| [chai-bot](https://github.com/rishikeshvarma/chai-bot): a Discord bot for our hostel server | 5.4 years | 26/100 | ⚰️ Buried | Two funeral questions, then a [tombstone](https://github.com/rishikeshvarma/chai-bot/blob/sanjivani/burial/TOMBSTONE.md): *"Brewed great chai, then wandered off to build a dashboard."* Its duration parser, cooldown guard and chai personality went to the organ bank. |
 
 ## What it looks like
 
@@ -133,6 +143,8 @@ Full step-by-step setup (Windows included) is in **[SETUP.md](SETUP.md)**. In sh
 3. Templates → import [`templates/sanjivani.template.yaml`](templates/sanjivani.template.yaml) → Create. You get three agents, the `sanjivani-graveyard` room, the protocol doc and a kickoff.
 4. In the channel: `@sanjivani-archaeologist dig up a demo patient`, or give it one of your own dead repos (a public GitHub link).
 
+**On Windows:** Switch Console can't find Claude Code, Codex or OpenCode installed on Windows, so its agents need macOS or Linux. Run Console and the agents inside a Linux virtual machine (for example Ubuntu in VirtualBox). That is how the demo was recorded. The toolkit itself runs on Windows too.
+
 ## Safety
 
 A room where friends can hand agents a repository is a room where strangers' code reaches your computer. What protects you, split by what enforces it:
@@ -174,6 +186,7 @@ templates/sanjivani.template.yaml  the Switch template: 3 agents, room, protocol
 tests/test_sanjivani.py            tests of the toolkit, including its safety rules
 SETUP.md                           setup on Windows / macOS / Linux
 DEMO.md                            the demo script
+assets/                            banner and icons
 ```
 
 ## License
